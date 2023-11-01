@@ -1,0 +1,455 @@
+--smartphone DB - data cleaning procedures:
+
+--null or wrong values replacements/deletions were made to bring better, 
+--more true to life results in later analysis stages
+
+ALTER TABLE smartphone
+ALTER COLUMN screen_size numeric(6,3);
+
+ALTER TABLE smartphone
+ALTER COLUMN avg_rating numeric(6,3);
+
+ALTER TABLE smartphone
+ALTER COLUMN primary_camera_rear numeric(5,2);
+
+ALTER TABLE smartphone
+ALTER COLUMN processor_speed numeric(6,3);
+
+UPDATE smartphone
+SET fast_charging = 22
+WHERE model LIKE 'Apple iPhone 11%';
+
+UPDATE smartphone 
+SET primary_camera_rear=12 
+WHERE primary_camera_rear=12.20
+
+UPDATE smartphone
+SET fast_charging = 20
+WHERE model LIKE 'Apple iPhone 13 M%';
+
+UPDATE smartphone
+SET fast_charging = 27
+WHERE model LIKE 'Apple iPhone 15 Pro%';
+
+UPDATE smartphone SET battery_capacity=	2815 WHERE model LIKE '%ne 12 (%'
+
+UPDATE smartphone SET processor_speed=3 WHERE model = 'iQOO Z9'
+
+UPDATE smartphone SET battery_capacity=	2815 WHERE model LIKE '%ne 12 P%'
+
+DELETE FROM smartphone WHERE model LIKE 'Nokia X50%' --cancelled or no evidence it did come out
+
+UPDATE smartphone SET processor_speed=2.5 WHERE model LIKE '%X6 Pro 5G'
+
+UPDATE smartphone SET battery_capacity=	2815 WHERE model LIKE '%ne 12 Mini%'
+
+UPDATE smartphone SET battery_capacity=	4422 WHERE model LIKE '%ne 15 Pro Max'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ne SE 3 2022'
+
+UPDATE smartphone SET processor_speed=2.91 WHERE model LIKE 'OnePlus Nord 5'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%F91 5G'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%S22 Fli%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%xel 2 X%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%xel 4%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%xel 6A%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%xel 7A%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y71%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%iKall%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%F22 Pro%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y10%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Hot 20i%'
+
+UPDATE smartphone SET fast_charging=80 WHERE model LIKE 'Leitz Phone 2%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%Blaze 5G%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%LG Wing%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%L5 5G%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Itel P36%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Itel S16%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Itel Vision 1%'
+
+UPDATE smartphone SET fast_charging=7.5 WHERE model LIKE '%JioPhone N%'
+
+UPDATE smartphone SET fast_charging=7.5 WHERE model LIKE '%Jio Phone 3%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Letv Y%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%S20 FE%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%S23 FE%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%M62%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%M52s%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%M51s%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%xy A04%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%xy A03%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%xy A01%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%12C%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%50i%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%me C33%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%me C2%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%me G1%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%me C11%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%me A1%'
+
+UPDATE smartphone SET fast_charging=67 WHERE model LIKE '%X6 Pro 5%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%co C5%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%co C31%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%WP9%'
+
+UPDATE smartphone SET fast_charging=150 WHERE model LIKE '%us Ace%'
+
+UPDATE smartphone SET fast_charging=65 WHERE model LIKE '%us 9RT%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%us 6%'
+
+UPDATE smartphone SET fast_charging=30 WHERE model LIKE '%G91 5G%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%G62%'
+
+UPDATE smartphone SET fast_charging=20 WHERE model LIKE '%G51%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%o E40%'
+
+UPDATE smartphone SET processor_speed=2 WHERE model LIKE '%y A05%'
+
+UPDATE smartphone SET processor_speed=2.2 WHERE model LIKE '%y A15%'
+
+UPDATE smartphone SET processor_speed=2.6 WHERE model LIKE '%y A34%'
+
+UPDATE smartphone SET processor_speed=2.2 WHERE model LIKE '%y A75%'
+
+UPDATE smartphone SET processor_speed=2.4 WHERE model LIKE '%y F14%'
+
+UPDATE smartphone SET processor_speed=2.4 WHERE model LIKE '%y M14%'
+
+UPDATE smartphone SET processor_speed=2.4 WHERE model LIKE '%y M35%'
+
+UPDATE smartphone SET processor_speed=2.2 WHERE model LIKE '%y M51%'
+
+UPDATE smartphone SET processor_speed=2.4 WHERE model LIKE '%y M52%'
+
+DELETE FROM smartphone WHERE model LIKE '%S22 FE%' --doesn't exist
+
+UPDATE smartphone SET processor_speed=2.8 WHERE model LIKE '%y S23 FE%'
+
+UPDATE smartphone SET processor_speed=3.75 WHERE model LIKE '%y S24%'
+
+UPDATE smartphone SET processor_speed=3.36 WHERE model LIKE '%la Pi P%'
+
+UPDATE smartphone SET processor_speed=3.1 WHERE model LIKE '%vo S17 P%'
+
+UPDATE smartphone SET processor_speed=2.8 WHERE model LIKE '%Vivo T2 Pro 5G%'
+
+UPDATE smartphone SET processor_speed=2 WHERE model LIKE '%Vivo Y02%'
+
+UPDATE smartphone SET os='other' WHERE model LIKE '%i Mate X%'
+
+UPDATE smartphone SET os='android' WHERE os IS NULL
+
+UPDATE smartphone SET primary_camera_front=0 WHERE model LIKE '%wei Mate X%' --no front_camera, so 0
+
+UPDATE smartphone SET primary_camera_front=0 WHERE model LIKE '%N Fold%' --no front_camera, so 0
+
+UPDATE smartphone SET primary_camera_front=0 WHERE model LIKE '%WP21%' --no front_camera, so 0
+
+UPDATE smartphone SET primary_camera_front=16 WHERE model LIKE '%Mi Mix Al%'
+
+$smartphone = "C:\Users\rejen\OneDrive\Desktop"
+Invoke-Sqlcmd -Query "SELECT * FROM [dbo].[smartphone]" -ServerInstance ".\REJENT\SQLEXPRESS" |
+Export-Csv -Path "$smartphone.csv" -NoTypeInformation
+
+
+
+
+UPDATE smartphone SET battery_capacity=5000 WHERE model LIKE '%y S24%'
+
+
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%o A12%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%o A17%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%M35%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%xy A9 Pro%'
+
+UPDATE smartphone SET fast_charging=7.75 WHERE model LIKE '%xy A7%'
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%xy A21%'
+
+
+
+UPDATE smartphone SET fast_charging=20 WHERE model LIKE '%xy A15%'
+
+
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%M14%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%xy F22%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%xy A92%'
+
+
+
+
+
+
+
+
+
+
+
+
+
+UPDATE smartphone SET fast_charging=15 WHERE model LIKE '%S9 Plus%'
+
+
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%V60 Thin%'
+
+UPDATE smartphone SET fast_charging=25 WHERE model LIKE '%Samsung Galaxy Note 10 Plus 5G%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Blaze NX%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Lava X3%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%Lyf Earth%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%Itel A%'
+
+
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%C01%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%C21%'
+
+
+
+UPDATE smartphone SET fast_charging=30 WHERE model LIKE '%Sharp Aquos R5G%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%FlexPai%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%max IN 2%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%Hot 11S%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ee M12%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ee K10%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Spark 8 (4%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Spark Go 2022%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%Pova Neo 2%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Spark 8T%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Spark 8C%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%or 9N%'
+
+UPDATE smartphone SET fast_charging=40 WHERE model LIKE '%RS Porsche D%'
+
+UPDATE smartphone SET fast_charging=22.5 WHERE model LIKE '%r Play 3%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ee G13 P%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo V15 Pro%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%Vertu Sig%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Tecno Pop 5%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Tecno Spark 9%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Pop 6 Pro%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Infinix Smart 6'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%Infinix Smart 6 HD'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%Infinix Smart 6 P%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo V11i%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y15s%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y12%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y01%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y15C%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo Y15 Pr%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo Y11%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo Y15'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo Y21%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y95%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y55%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo Y93%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y15s%'
+
+UPDATE smartphone SET fast_charging=5 WHERE model LIKE '%ivo Y25%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%ivo Y91%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%ivo Y3%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%dmi Note 4%'
+
+UPDATE smartphone SET fast_charging=44 WHERE model LIKE '%ivo Y78%'
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%dmi 10A%
+
+UPDATE smartphone SET fast_charging=10 WHERE model LIKE '%dmi 9A%
+
+UPDATE smartphone SET fast_charging=33 WHERE model LIKE '%co F1%'
+
+UPDATE smartphone SET fast_charging=18 WHERE model LIKE '%dmi 9%
+
+UPDATE smartphone
+SET processor_speed = 3.78
+WHERE model LIKE '%iPhone 15 P%'
+
+UPDATE smartphone
+SET processor_speed = 1.8
+WHERE model LIKE '%Y2 Pro';
+
+UPDATE smartphone
+SET processor_brand = 'mediatek'
+WHERE model LIKE '%o Phone 3';
+
+UPDATE smartphone
+SET processor_brand = 'mediatek'
+WHERE model LIKE '%y A15';
+
+UPDATE smartphone
+SET processor_brand = 'mediatek'
+WHERE model LIKE '%y A05';
+
+UPDATE smartphone
+SET processor_brand = 'spreadtrum'
+WHERE model LIKE '%l A56%';
+
+UPDATE smartphone
+SET processor_brand = 'exynos'
+WHERE model LIKE '%y M35%';
+
+UPDATE smartphone
+SET num_cores = 8
+WHERE model LIKE '%X50 5G';
+
+UPDATE smartphone
+SET processor_brand = 'kirin'
+WHERE model LIKE '%a Y61%';
+
+UPDATE smartphone
+SET processor_brand = 'tesla'
+WHERE model LIKE '%la Pi Ph%';
+
+UPDATE smartphone
+SET processor_speed = 2.2
+WHERE model LIKE '%Y61%';
+
+UPDATE smartphone
+SET primary_camera_front = 0.3
+WHERE model LIKE '%A23s%';
+
+UPDATE smartphone
+SET processor_speed = 3.46
+WHERE model LIKE '%iPhone 14 P%'
+
+UPDATE smartphone
+SET model = 'Apple iPhone 15 Pro Max'
+WHERE model = 'Apple iPhone 15 Ultra';
+--changing model name, wrong predictions
+
+UPDATE smartphone SET os='android' WHERE model LIKE 'CAT S22%' --null os replacement
+
+UPDATE smartphone SET os='android' WHERE model LIKE 'Royole%'  --null os replacement
+
+UPDATE smartphone SET model='Apple iPhone 7 Plus' WHERE model='Apple iPhone 7s' --wrong model name
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone 8%'
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone X%'
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone 11%'
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone 15%'
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone 14%'
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone 13%'
+
+UPDATE smartphone SET num_cores='6' WHERE model LIKE 'Apple iPhone 12%'
+
+DELETE FROM smartphone WHERE model LIKE 'Apple iPhone 14 Mini' --model doesn't exist
+
+DELETE FROM smartphone WHERE model LIKE 'Apple iPhone XR2' --model doesn't exist
+
+DELETE FROM smartphone WHERE model LIKE 'Apple iPhone 9' --model doesn't exist
+
+DELETE FROM smartphone WHERE model LIKE 'Apple iPhone SE 4' --model doesn't exist yet
+
+UPDATE smartphone SET processor_brand='mediatek' WHERE model LIKE 'iKall Z1%' --null processor_brand replacement
+
+UPDATE smartphone SET battery_capacity = 2018 WHERE model LIKE '%SE 3 20%' --battery capacity replacement
+
+ALTER TABLE smartphone
+ADD price_to_pln int; --adding converted price column (PLN)
+
+UPDATE smartphone
+SET price_to_pln = price*0.052 --rupee to polish zloty conversion with 0,052 rate
+
+UPDATE smartphone
+SET avg_rating = 0
+WHERE avg_rating IS NULL;
+
+ALTER TABLE smartphone
+ADD id INT IDENTITY(1,1) PRIMARY KEY; --adding autonumeric ID column as primary key
+
+
+
+
